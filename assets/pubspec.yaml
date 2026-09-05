@@ -1,0 +1,32 @@
+name: celik_kesit
+description: ÇYTHYE-2016 esaslı çelik kesit tasarım ve tahkik uygulaması.
+publish_to: 'none'
+version: 4.9.5+62
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # PDF rapor üretimi ve sistem yazdırma/paylaşma penceresi
+  pdf: ^3.10.8
+  printing: ^5.12.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    # PDF raporda gömülü kullanılır. Carlito (SIL OFL 1.1), rapor için
+    # gereken karakterlere indirgenmiştir — Türkçe harfler, üst simgeler ve
+    # matematik işaretleri dahil.
+    - assets/fonts/Carlito-Regular.ttf
+    - assets/fonts/Carlito-Bold.ttf
+    # Rapor başlığındaki sürüm buradan OKUNUR (lib/report/pdf_report.dart,
+    # surumuYukle). Elle eşlenen bir sabit kullanılmaz; v4.9.3'te üretilen
+    # raporların başlığında "v4.9.0" yazması bu yüzden mümkün değildir.
+    - pubspec.yaml
